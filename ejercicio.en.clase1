@@ -1,0 +1,51 @@
+daniel espada- joseph prado
+import java.util.Scanner;
+class prac8 { 
+  public static void main (String [] args){
+    Scanner leer = new Scanner (System.in);
+    double valor1; double valor2; int valor3 = 0;
+    System.out.println("Introduce dos valores aleatorios:  ");
+    valor1 = leer.nextDouble();
+    valor2 = leer.nextDouble();
+
+    System.out.println("Introduce la ope: suma (1, Resta (2, multiplicar (3,division (4))))  ");
+    valor3 = leer.nextInt();
+    
+    switch (valor3) {
+      case 1:
+        sumar(valor1,valor2);
+        break;
+      case 2:
+        restar(valor1,valor2);
+        break;
+      case 3:
+         dividir(valor1,valor2);
+        break;
+      case 4:
+        multiplicar(valor1,valor2);
+        break;
+    }
+  }
+  
+  private static void sumar(double valor1, double valor2){
+    double respuesta= 0;
+    respuesta = valor1 + valor2;
+    System.out.println("las suma es: "+respuesta);
+  }
+  private static void restar(double valor1, double valor2){
+    double respuesta = 0;
+    respuesta = valor1 - valor2;
+    System.out.println("la resta es: "+ respuesta);
+  }
+  private static void dividir(double valor1, double valor2){
+    double respuesta = 0;
+    respuesta = valor1 / valor2;
+    System.out.println("la division es: "+ respuesta);
+  }
+  private static void multiplicar(double valor1, double valor2){
+    double respuesta = 0;
+    respuesta = valor1 * valor2;
+    System.out.println("la multiplicacion es: "+ respuesta);
+  }
+  
+}
