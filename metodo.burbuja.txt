@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class Main {
+	Scanner teclado=new Scanner(System.in);
+
+	private int [] calificaciones;
+	
+	public void inicio(){
+		
+		calificaciones=new int[5];
+
+		for(int j=0; j<calificaciones.length; j++){
+			
+			System.out.println("ingresa la calificación del alumno");
+			int a=teclado.nextInt();
+			calificaciones[j]=a;
+			
+    } 
+  }
+	public void ordenamiento(){
+
+	for(int i=0; i<calificaciones.length; i++){
+		for(int j=0; j<calificaciones.length-1; j++){
+			if(calificaciones[j]>calificaciones[j+1]){
+				
+				int aux=calificaciones[j];
+				calificaciones[j]=calificaciones[j+1];
+				calificaciones[j+1]=aux;
+				
+      }
+    } 
+  }
+  } 
+
+	public void impresion(){
+		
+		System.out.println("El orden de las calificaciones de menor a mayor es: ");
+		for(int i=0; i<calificaciones.length; i++){
+			
+			System.out.println(calificaciones[i]);
+			
+    }
+  }
+	
+	public static void main(String[] args) {
+		
+		Main Metodo=new Main();
+		Metodo.inicio();
+		Metodo.ordenamiento();
+		Metodo.impresion();
+		
+  } 
+}
